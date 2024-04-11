@@ -1,0 +1,148 @@
+@mixin h() {
+    font-family: Archangelsk, sans-serif;
+    font-weight: normal;
+    font-size: 62px;
+    margin: 0;
+}
+
+@mixin photoTransform() {
+    clip-path: polygon(8% 0, 100% 0, 100% 84%, 91% 100%, 0 100%, 0 15%);
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1280px;
+    height: 1000px;
+    vertical-align: middle;
+    
+    
+    &::before {
+        content: " ";
+        z-index: -200;
+        position: absolute;
+        width: 100%;
+        height: 1000px;
+        top: 0;
+        left: 0;
+        background: url("/images/background1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .header-main {
+        display: flex;
+        justify-content: space-between;
+
+        .links {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+    }
+
+    .header-about {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-left: 656px;
+        margin-top: 558px;
+        justify-content: start;
+        padding: 70px;
+
+        &::before {
+            content: " ";
+            margin: 0;
+            z-index: -100;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: url("/images/Rectangle59.png");
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            @include h();
+        }
+
+        .about-button {
+            border: 1px solid black;
+            margin-top: 25px;
+            padding: 19px 50px;
+            width: 35%;
+            background-color: black;
+
+            a {
+                font-family: Roboto-Bold;
+                font-size: 24px;
+                font-weight: bold;       
+                text-wrap: nowrap;
+                color: #F8F200;
+            }
+        }
+    }  
+}
+
+.about {
+    margin: 70px auto;
+    width: 1280px;
+    background-color: #FFF;
+
+    h1 {
+        @include h();
+    }
+
+    .about-game {
+        width: 952px;
+        margin: 0;
+        margin-top: 25px;
+        font-family: Roboto-Regular;
+        color: #777777;
+        font-size: 18px;
+        line-height: 34px;
+
+        span {
+            font-family: Roboto-Bold;
+            color: #52BEDC;
+        }
+    }
+
+    .photo-game {
+        display: flex;
+        gap: 32px;
+        margin-top: 70px;
+
+        .two-photo {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .photo {
+            @include photoTransform();
+        }
+    }
+}
+
+
+@font-face {
+    font-family: Archangelsk;
+    src: url("/fonts/Archangelsk.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    font-weight: 400;
+    src: url("/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    font-weight: bold;
+    src: url("/fonts/Roboto-Bold.ttf");
+}
