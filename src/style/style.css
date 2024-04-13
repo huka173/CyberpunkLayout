@@ -1,10 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 header {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  padding: 0;
   width: 1280px;
   height: 1000px;
-  vertical-align: middle;
 }
 header::before {
   content: " ";
@@ -33,20 +38,10 @@ header .header-about {
   display: flex;
   flex-direction: column;
   margin-left: 656px;
-  margin-top: 558px;
+  margin-top: 566px;
   justify-content: start;
   padding: 70px;
-}
-header .header-about::before {
-  content: " ";
-  margin: 0;
-  z-index: -100;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: url("/images/Rectangle59.png");
+  background-image: url("/images/Rectangle59.png");
   background-repeat: no-repeat;
 }
 header .header-about h1 {
@@ -63,11 +58,12 @@ header .header-about .about-button {
   background-color: black;
 }
 header .header-about .about-button a {
-  font-family: Roboto-Bold;
+  font-family: Roboto-Bold, sans-serif;
   font-size: 24px;
   font-weight: bold;
   text-wrap: nowrap;
   color: #F8F200;
+  text-decoration: none;
 }
 
 .about {
@@ -85,7 +81,7 @@ header .header-about .about-button a {
   width: 952px;
   margin: 0;
   margin-top: 25px;
-  font-family: Roboto-Regular;
+  font-family: Roboto-Regular, sans-serif;
   color: #777777;
   font-size: 18px;
   line-height: 34px;
@@ -108,13 +104,177 @@ header .header-about .about-button a {
   clip-path: polygon(8% 0, 100% 0, 100% 84%, 91% 100%, 0 100%, 0 15%);
 }
 
+.competition {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 140px;
+  margin: 0;
+  background-color: black;
+}
+.competition::before {
+  content: "";
+  position: absolute;
+  background-image: url("/images/img1.svg");
+  width: 100%;
+  height: 70px;
+  left: 0;
+  top: 0;
+  background-repeat: repeat-x;
+}
+.competition .competition-section {
+  width: 1280px;
+  margin: 0 auto;
+}
+.competition .competition-section .competition-h {
+  display: flex;
+  padding-top: 15px;
+}
+.competition .competition-section .competition-h h1 {
+  padding-top: 70px;
+  padding-left: 32px;
+  padding-bottom: 14px;
+  color: #FFF;
+  font-family: Archangelsk, sans-serif;
+  font-weight: normal;
+  font-size: 62px;
+  margin: 0;
+}
+.competition .competition-section p {
+  width: 952px;
+  font-family: Roboto-Regular, sans-serif;
+  padding: 0;
+  margin: 0;
+  padding-top: 25px;
+  font-size: 18px;
+  color: #FFF;
+  line-height: 34px;
+}
+.competition .competition-section p span {
+  font-family: Roboto-Bold;
+  color: #52BEDC;
+}
+.competition::after {
+  content: "";
+  position: absolute;
+  background-image: url("/images/img2.svg");
+  width: 100%;
+  height: 70px;
+  left: 0;
+  bottom: 0;
+  background-repeat: repeat-x;
+}
+
+.competition-main {
+  margin-top: 25px;
+  display: flex;
+  width: 1280px;
+}
+.competition-main .competition-form-img {
+  display: flex;
+  gap: 32px;
+}
+.competition-main .competition-form-img form {
+  margin-top: 73px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  width: 460px;
+}
+.competition-main .competition-form-img form .name {
+  padding-bottom: 13px;
+  background-color: black;
+  border: none;
+  border-bottom: 1px solid #777777;
+  font-size: 18px;
+  color: #FFF;
+  font-family: Roboto-Regular;
+}
+.competition-main .competition-form-img form .name::placeholder {
+  font-size: 18px;
+  color: #FFF;
+  font-family: Roboto-Regular;
+}
+.competition-main .competition-form-img form .email {
+  padding-bottom: 13px;
+  background-color: black;
+  border: none;
+  border-bottom: 1px solid #777777;
+  font-size: 18px;
+  color: #FFF;
+  font-family: Roboto-Regular;
+}
+.competition-main .competition-form-img form .email::placeholder {
+  font-size: 18px;
+  color: #FFF;
+  font-family: Roboto-Regular;
+}
+.competition-main .competition-form-img form .file {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px dashed #777777;
+  padding: 39px 137px;
+  text-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.competition-main .competition-form-img form .file .label-for-file {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.competition-main .competition-form-img form .file .text-file {
+  font-size: 18px;
+  font-family: Roboto-Regular;
+  color: #FFF;
+}
+.competition-main .competition-form-img form .file .text-file hr {
+  margin: 0;
+  padding: 0;
+}
+.competition-main .competition-form-img form .file .text-type-file {
+  margin-top: 7px;
+  font-size: 12px;
+  font-family: Roboto-Regular;
+  color: #FFF;
+}
+.competition-main .competition-form-img form .btn-form {
+  display: flex;
+  flex-direction: column;
+}
+.competition-main .competition-form-img form .btn-form button {
+  width: 192px;
+  height: 59px;
+  background-color: #F8F200;
+  font-size: 18px;
+  font-family: Roboto-Bold;
+}
+
+.checkbox-form {
+  width: 788px;
+  margin-top: 15px;
+  color: #FFF;
+  font-size: 12px;
+  font-family: Roboto-Regular;
+}
+.checkbox-form input {
+  padding: 0;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.competition-img {
+  margin-top: 25px;
+}
+
 @font-face {
   font-family: Archangelsk;
   src: url("/fonts/Archangelsk.ttf");
 }
 @font-face {
   font-family: Roboto-Regular;
-  font-weight: 400;
+  font-weight: lighter;
   src: url("/fonts/Roboto-Regular.ttf");
 }
 @font-face {
