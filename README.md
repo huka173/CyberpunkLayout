@@ -1,2 +1,2 @@
-# AuraLayout
+# CyberpunkLayout
 Тренировка в верстки
