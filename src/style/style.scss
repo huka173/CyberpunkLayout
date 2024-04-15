@@ -288,6 +288,8 @@ header {
 }
 
 .checkbox-form {
+    display: flex;
+    align-items: center;
     width: 788px;
     margin-top: 15px;
     color: #FFF;
@@ -302,8 +304,468 @@ header {
 }
 
 .competition-img {
+    display: flex;
     margin-top: 25px;
 }
+
+.advertising {
+    background-color: #F8F200;
+}
+
+.advertising-main {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 70px 0;
+    width: 1280px;
+    gap: 32px;
+
+    .advertising-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 26px;
+
+        .adv-logo {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .advertising-text {
+        display: flex;
+        flex-direction: column;
+        width: 624px;
+        margin: 0;
+        padding: 0;
+
+        h1 {
+            @include h();
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 18px;
+            font-family: Roboto-Regular, sans-serif;
+            margin: 0;
+            line-height: 34px;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.adv-text-characteristics {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    .chr1 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        span {
+            font-family: Roboto-Regular, sans-serif;
+            font-size: 18px;
+        }
+    }
+
+    .chr2 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        span {
+            font-family: Roboto-Regular, sans-serif;
+            font-size: 18px;
+        }
+    }
+
+    .chr3 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        span {
+            font-family: Roboto-Regular, sans-serif;
+            font-size: 18px;
+        }
+    }
+}
+
+.adv-button {
+    display: flex;
+    width: 192px;
+    height: 59px;
+    flex-direction: column;
+
+    .text-button {
+        background-color: black;
+        color: #F8F200;
+        font-size: 18px;
+        padding: 19px 50px;
+        font-family: Roboto-Bold;
+        text-decoration: none;
+    }
+}
+
+.game {
+    background-color: black;
+
+    .game-main {
+        display: flex;
+        gap: 32px;
+    }
+}
+
+.game-buy {
+    width: 624px;
+    margin: 70px 0;
+
+    h1 {
+        color: #FFF;
+        @include h();
+        margin-bottom: 25px;
+    }
+}
+
+.game-set {
+    margin-bottom: 70px;
+
+    h2 {
+        font-size: 24px;
+        font-family: Robot-Bold, sans-serif;
+        color: #52BEDC;
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+    }
+
+    .game-set-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .game-container-1 {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            span {
+                font-family: Roboto-Regular, sans-serif;
+                font-size: 18px;
+                color: #FFF;
+            }
+        }
+
+        .game-container-2 {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            span {
+                font-family: Roboto-Regular, sans-serif;
+                font-size: 18px;
+                color: #FFF;
+            }
+        }
+
+        .game-container-3 {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            span {
+                font-family: Roboto-Regular, sans-serif;
+                font-size: 18px;
+                color: #FFF;
+            }
+        }
+    }
+}
+
+.game-platform {
+
+    h2 {
+        font-size: 24px;
+        font-family: Robot-Bold, sans-serif;
+        color: #52BEDC;
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+    }
+
+    .game-platform-container {
+        display: flex;
+        flex-direction: column;
+        gap: 47px;
+
+        .game-plat-cont-1 {
+            display: flex;
+            gap: 80px;
+        }
+
+        .game-plat-cont-2 {
+            display: flex;
+            gap: 80px;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+}
+
+.footer-main {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+    margin-bottom: 13px;
+
+    .footer-main-cont-1 {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .footer-main-cont-2 {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+
+        h2 {
+            font-size: 18px;
+            font-family: Roboto-Regular, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+.footer-end {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+
+    h2 {
+        font-size: 12px;
+        font-family: Roboto-Regular, sans-serif;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (max-width: 1440px) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .header-about {
+            position: relative;
+            flex-direction: column;
+            margin-top: 532px;
+            margin-left: 690px;
+        }  
+
+        .header-main {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .about {
+        width: 1000px;
+    }
+
+    .advertising-main {
+        width: 100%;
+    }
+
+    .photo-game {
+        flex-direction: column;
+    }
+
+    .competition-img {
+        flex-direction: column;
+    }
+
+    .game-main {
+        width: 100%;
+    }
+
+    .game-main-img {
+        width: 50%;
+    }
+
+    .footer-main {
+        width: 100%;
+        gap: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .header-about {
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 523px;
+            margin-left: 450px;
+
+            .about-button {
+                justify-content: center;
+                align-items: center;
+            }
+        }  
+
+        .header-main {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .about {
+        width: 1000px;
+    }
+
+    .advertising-main {
+        width: 100%;
+    }
+
+    .adv-logo {
+        flex-direction: column;
+    }
+
+    .photo-game {
+        flex-direction: column;
+    }
+
+    .competition-img {
+        flex-direction: column;
+    }
+
+    .game-main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .game-main-img {
+        width: 50%;
+    }
+
+    .footer-main {
+        width: 100%;
+        gap: 0;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .header-about {
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 523px;
+            margin-left: 450px;
+
+            .about-button {
+                justify-content: center;
+                align-items: center;
+            }
+        }  
+
+        .header-main {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .about {
+        width: 1000px;
+    }
+
+    .advertising-main {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .adv-logo {
+        flex-direction: column;
+    }
+
+    .photo-game {
+        flex-direction: column;
+    }
+
+    .competition {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .competition-img {
+        flex-direction: column;
+    }
+
+    .game-main {
+        width: 100%;
+    }
+
+    .game-main-img {
+        width: 50%;
+    }
+
+    .footer-main {
+        width: 100%;
+        gap: 0;
+    }
+}
+
+
 
 @font-face {
     font-family: Archangelsk;
