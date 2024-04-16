@@ -12,15 +12,17 @@
 body {
     margin: 0;
     padding: 0;
-
+    width: auto;
+    overflow-x: hidden;
 }
 
 header {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     margin: 0 auto;
     padding: 0;
-    width: 1280px;
+    width: 80%;
     height: 1000px;
     
     &::before {
@@ -31,7 +33,7 @@ header {
         height: 1000px;
         top: 0;
         left: 0;
-        background: url("/images/background1.jpg");
+        background: url("../../images/background1.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -40,6 +42,7 @@ header {
     .header-main {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         .links {
             display: flex;
@@ -49,14 +52,13 @@ header {
     }
 
     .header-about {
-        position: relative;
         display: flex;
         flex-direction: column;
-        margin-left: 656px;
-        margin-top: 566px;
-        justify-content: start;
+        justify-content: center;
+        margin-left: 50%;
         padding: 70px;
-        background-image: url("/images/Rectangle59.png");
+        background-color: #F8F200;
+        @include photoTransform();
         background-repeat: no-repeat;
 
         h1 {
@@ -64,13 +66,12 @@ header {
         }
 
         .about-button {
-            border: 1px solid black;
             margin-top: 25px;
-            padding: 19px 50px;
-            width: 35%;
-            background-color: black;
 
             a {
+                margin-top: 44px;
+                padding: 19px 50px;
+                background-color: black;
                 font-family: Roboto-Bold, sans-serif;
                 font-size: 24px;
                 font-weight: bold;       
@@ -84,16 +85,17 @@ header {
 
 .about {
     margin: 70px auto;
-    width: 1280px;
+    width: 80%;
     background-color: #FFF;
 
     h1 {
+        margin-left: auto;
+        margin-right: auto;
         @include h();
     }
 
     .about-game {
-        width: 952px;
-        margin: 0;
+        margin: 0 auto;
         margin-top: 25px;
         font-family: Roboto-Regular, sans-serif;
         color: #777777;
@@ -133,7 +135,7 @@ header {
     &::before {
         content: "";
         position: absolute;
-        background-image: url("/images/img1.svg");
+        background-image: url("../../images/img1.svg");
         width: 100%;
         height: 70px;
         left: 0;
@@ -142,7 +144,7 @@ header {
     }
 
     .competition-section {
-        width: 1280px;
+        width: 80%;
         margin: 0 auto;
 
         .competition-h {
@@ -160,7 +162,7 @@ header {
         }
 
         p {
-            width: 952px;
+            width: 60%;
             font-family: Roboto-Regular, sans-serif;
             padding: 0;
             margin: 0;
@@ -179,7 +181,7 @@ header {
     &::after {
         content: "";
         position: absolute;
-        background-image: url("/images/img2.svg");
+        background-image: url("../../images/img2.svg");
         width: 100%;
         height: 70px;
         left: 0;
@@ -191,9 +193,11 @@ header {
 .competition-main {
     margin-top: 25px;
     display: flex;
-    width: 1280px;
+    flex-wrap: wrap;
+    width: 80%;
 
     .competition-form-img {
+        width: 70%;
         display: flex;
         gap: 32px;
 
@@ -285,13 +289,27 @@ header {
                 }
             }
         }
+
+        .competition-img {
+            display: flex;
+
+            .xbox {
+                width: 200px;
+                height: 200px;
+            }
+
+            .ps5 {
+                width: 200px;
+                height: 200px;
+            }
+        }
     }
 }
 
 .checkbox-form {
     display: flex;
     align-items: center;
-    width: 788px;
+    width: 100%;
     margin-top: 15px;
     color: #FFF;
     font-size: 12px;
@@ -318,11 +336,12 @@ header {
     align-items: center;
     margin: 0 auto;
     padding: 70px 0;
-    width: 1280px;
+    width: 80%;
     gap: 32px;
 
     .advertising-image {
         display: flex;
+        width: 50%;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -333,13 +352,18 @@ header {
             gap: 25px;
             justify-content: center;
             align-items: center;
+            width: 50%;
+        }
+
+        .hp-monitor {
+            width: 100%;
         }
     }
 
     .advertising-text {
         display: flex;
         flex-direction: column;
-        width: 624px;
+        width: 50%;
         margin: 0;
         padding: 0;
 
@@ -418,12 +442,17 @@ header {
 
     .game-main {
         display: flex;
+        flex-basis: 50%;
         gap: 32px;
+
+        .game-main-img {
+            width: 50%;
+            object-fit: cover;
+        }
     }
 }
 
 .game-buy {
-    width: 624px;
     margin: 70px 0;
 
     h1 {
@@ -501,6 +530,7 @@ header {
 
     .game-platform-container {
         display: flex;
+        width: 100%;
         flex-direction: column;
         gap: 47px;
 
@@ -523,21 +553,24 @@ footer {
 }
 
 .footer-main {
-    width: 1280px;
+    width: 80%;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 13px;
     margin-bottom: 13px;
 
     .footer-main-cont-1 {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         gap: 32px;
     }
 
     .footer-main-cont-2 {
         display: flex;
+        flex-wrap: wrap;
         gap: 32px;
         align-items: center;
 
@@ -567,220 +600,378 @@ footer {
 }
 
 @media (max-width: 1440px) {
-    body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    header {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-
-        .header-about {
-            position: relative;
-            flex-direction: column;
-            margin-top: 532px;
-            margin-left: 690px;
-        }  
-
-        .header-main {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-    }
 
     .about {
-        width: 1000px;
-    }
+        .photo-game {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            gap: 32px;
+            margin-top: 70px;
+    
+            .two-photo {
+                display: flex;
+                flex-direction: row;
+                gap: 32px;
+                width: 100%;
 
-    .advertising-main {
-        width: 100%;
-    }
+                .ph-1 {
+                    width: 50%;
+                }
 
-    .photo-game {
-        flex-direction: column;
-    }
+                .ph-2 {
+                    width: 50%;
+                }
+            }
+    
+            .photo {
+                @include photoTransform();
+            }
 
-    .competition-img {
-        flex-direction: column;
-    }
-
-    .game-main {
-        width: 100%;
-    }
-
-    .game-main-img {
-        width: 50%;
-    }
-
-    .footer-main {
-        width: 100%;
-        gap: 0;
+            .ph-last {
+                width: 100%;
+            }
+        }
     }
 }
 
-@media (max-width: 1024px) {
-    body {
-        width: 100%;
-        overflow-x: hidden;
-        display: flex;
-        flex-direction: column;
+@media (max-width: 1150px) {   
+    header {
+        .header-about {
+            margin-left: 30%;
+        }
+    }
+
+    .competition-form-img {
+        flex-direction: column-reverse;
+    }
+    
+    .advertising-main {
+
+        .advertising-image {
+            .adv-logo {
+                flex-wrap: wrap;
+            }
+        }
+    } 
+
+    .footer-main {
         justify-content: center;
     }
+}
 
+@media (max-width: 850px) {
     header {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-
-        .header-about {
-            position: relative;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 523px;
-            margin-left: 450px;
-
-            .about-button {
-                justify-content: center;
-                align-items: center;
-            }
-        }  
-
         .header-main {
-            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
+    }    
+
+    .game {
+        .game-main {
+            flex-wrap: wrap;
+
+            .game-main-img {
+                width: 100%;
+            }
+        }
     }
 
-    .about {
-        width: 1000px;
+    .game-buy {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 70px;
     }
 
     .advertising-main {
-        width: 100%;
-    }
+        width: 80%;
+        flex-wrap: wrap;
 
-    .adv-logo {
-        flex-direction: column;
-    }
+        .advertising-image {
+            width: 80%;
 
-    .photo-game {
-        flex-direction: column;
-    }
+            .adv-logo {
+                flex-wrap: nowrap;
+            }
+        }
 
-    .competition-img {
-        flex-direction: column;
-    }
-
-    .game-main {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .game-main-img {
-        width: 50%;
-    }
-
-    .footer-main {
-        width: 100%;
-        gap: 0;
+        .advertising-text {
+            width: 100%;
+        }
     }
 }
 
-
-
-@media (max-width: 768px) {
-    body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
+@media (max-width: 600px) {
     header {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-
-        .header-about {
-            position: relative;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 523px;
-            margin-left: 450px;
-
-            .about-button {
-                justify-content: center;
-                align-items: center;
-            }
-        }  
+        margin: 0;
+        width: auto;
 
         .header-main {
-            flex-direction: column;
+            .links {
+                gap: 10px;
+            }
+        }
+
+        .header-about {
+            margin: 0;
             justify-content: center;
             align-items: center;
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .about-button {
+                a {
+                    font-size: 20px;
+                }
+            }
         }
     }
 
     .about {
-        width: 1000px;
-    }
+        h1 {
+            font-size: 30px;
+        }
 
-    .advertising-main {
-        width: 100%;
-        flex-wrap: wrap;
-    }
+        p {
+            font-size: 16px;
+        }
 
-    .adv-logo {
-        flex-direction: column;
-    }
+        .photo-game {
+            width: 100%;
+            .two-photo {
+                flex-direction: column;
 
-    .photo-game {
-        flex-direction: column;
+                .ph-1 {
+                    width: 100%;
+                }
+
+                .ph-2 {
+                    width: 100%;
+                }
+            }
+        }
     }
 
     .competition {
-        display: flex;
-        flex-direction: column;
+
+        .competition-section {
+
+            .competition-h {
+                width: 100%;
+                flex-direction: row;
+                flex-wrap: nowrap;
+
+                .sale {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                h1 {
+                    padding-top: 0;
+                    font-size: 30px;
+                }
+            }
+
+            p {
+                width: auto;
+                font-size: 16px;
+            }
+        }
     }
 
-    .competition-img {
-        flex-direction: column;
+    .competition-main {
+        .competition-form-img {
+            form {
+                width: auto;
+
+                .name {
+                    font-size: 16px;
+                }
+
+                .email {
+                    font-size: 16px;
+                }
+
+                .file {
+                    width: auto;
+
+                    .text-type-file {
+                        visibility: hidden;
+                    }
+
+                    .text-file {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .competition-img {
+                width: 200px;
+
+                .xbox {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                .ps5 {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
     }
 
-    .game-main {
-        width: 100%;
-    }
+    .advertising-main {
+        justify-content: center;
+        width: 80%;
+        flex-wrap: wrap;
 
-    .game-main-img {
-        width: 50%;
+        .advertising-image {
+            justify-content: center;
+            width: 80%;
+
+            .adv-logo {
+                flex-wrap: wrap;
+            }
+        }
+
+        .advertising-text {
+            width: 100%;
+
+            h1 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
     }
 
     .footer-main {
-        width: 100%;
-        gap: 0;
+        .footer-main-cont-1 {
+            justify-content: center;
+            gap: 0;
+        }
+
+        .footer-main-cont-2 {
+            margin-top: 25px;
+            justify-content: center;
+        }
     }
-}
+    .game-platform {
+        .game-platform-container {
+
+            .game-plat-cont-1 {
+                gap: 40px;
+            }
+
+            .game-plat-cont-2 {
+                gap: 40px;
+            }
+        }
+    } 
+    
+} 
+
+
+// @media (max-width: 768px) {
+//     body {
+//         width: auto;
+//     }
+
+//     header {
+//         display: flex;
+//         flex-direction: column;
+
+//         .header-about {
+//             position: relative;
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: center;
+//             margin-top: 523px;
+//             margin-left: 100px;
+
+//             .about-button {
+//                 justify-content: center;
+//                 align-items: center;
+//             }
+//         }  
+
+//         .header-main {
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: center;
+//             gap: 0;
+//         }
+//     }
+
+//     .about {
+//         width: auto;
+
+//         .about-game {
+//             width: auto;
+//         }
+
+//         .photo-game {
+//             width: auto;
+//         }
+//     }
+
+//     .advertising-main {
+//         width: 100%;
+//         flex-wrap: wrap;
+//     }
+
+//     .adv-logo {
+//         flex-direction: column;
+//     }
+
+//     .photo-game {
+//         flex-direction: column;
+//     }
+
+//     .competition {
+//         display: flex;
+//         flex-direction: column;
+//     }
+
+//     .competition-img {
+//         flex-direction: column;
+//     }
+
+//     .game-main {
+//         width: 100%;
+//     }
+
+//     .game-main-img {
+//         width: 50%;
+//     }
+
+//     .footer-main {
+//         width: 100%;
+//         gap: 0;
+//     }
+// }
 
 
 
 @font-face {
     font-family: Archangelsk;
-    src: url("/fonts/Archangelsk.ttf");
+    src: url("../../fonts/Archangelsk.ttf");
 }
 
 @font-face {
     font-family: Roboto-Regular;
     font-weight: lighter;
-    src: url("/fonts/Roboto-Regular.ttf");
+    src: url("../../fonts/Roboto-Regular.ttf");
 }
 
 @font-face {
     font-family: Roboto-Bold;
     font-weight: bold;
-    src: url("/fonts/Roboto-Bold.ttf");
+    src: url("../../fonts/Roboto-Bold.ttf");
 }
